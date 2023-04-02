@@ -13,4 +13,6 @@ def user_login():
 def user_dashboard():
     return render_template("user_dashboard.html")
 
-
+@app.route("/admin_dashboard")
+def admin_dashboard():
+    return render_template("admin_dashboard.html")
