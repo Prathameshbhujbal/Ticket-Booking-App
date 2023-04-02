@@ -14,7 +14,7 @@
 <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-secondary justify-content-between">
-        <a class="navbar-brand mx-3" href="#">{{user-1's dashboard}}</a>
+        <a class="navbar-brand mx-3" href="#">user-1's dashboard</a>
         <div>
             <a class="navbar-brand " href="#">Profile</a>
             <a class="navbar-brand" href="#">Bookings</a>
@@ -25,24 +25,24 @@
 
     <div class="card m-5 py-3">
         <div class="justify-content-around">
-            <strong><span>Booking - {{venue}} {{show_number}}</span></strong>
-            <strong><span>Timing - {{time}}</span></strong>
+            <!-- <strong><span>Booking - {{venue}} {{show_number}}</span></strong>
+            <strong><span>Timing - {{time}}</span></strong> -->
         </div>
 
-        <form action="">
+        <form action="" method="POST">
             <div class="m-4 text-center">
                 <p>Available seats: 35</p>
-                <div class="p-2">
-                    <span>Number:</span>
-                    <input type="text">
+                <div class="col-sm-4 p-2">
+                    <label for="number">Number : </label>
+                    <input type="number" id="number" placeholder="Number of tickets">
                 </div>
-                <div class="p-2">
-                    <span>Price:</span>
-                    <input type="text">
+                <div class="col-sm-4 p-2">
+                    <label for="price">Price: </label>
+                    <input type="price" id="price" placeholder="Price">
                 </div>
-                <div class="p-2">
-                    <span>Total:</span>
-                    <input type="text">
+                <div class="col-sm-4 p-2">
+                    <label for="total">Total: </label>
+                    <input type="total" id="total" placeholder="Total">
                 </div>
                 <div class="pt-3">
                     <button type="button" class="btn btn-success">Confirm Booking</button>
