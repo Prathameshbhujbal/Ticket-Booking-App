@@ -1,17 +1,19 @@
 from flask import Flask, request
 from flask import render_template
 from flask import current_app as app
-# from application.models import Article
+from application.models import Users
 
 
 
 @app.route("/", methods = ["GET", "POST"])
 def user_login():
-    return render_template("user_login.html")
+    if request.method == "GET":
+        return render_template("user_login.html")
+    elif request.method == "POST":
+        # request.args is for "get" request
+        # request.form is for "post" request
+        return render_template("user_dashboard.html", username = request.form.get("username"))
 
-@app.route("/user_dashboard")
-def user_dashboard():
-    return render_template("user_dashboard.html")
 
 @app.route("/user_bookings")
 def user_bookings():
@@ -35,7 +37,8 @@ def admin_show_summary():
 
 @app.route("/admin_shows")
 def admin_shows():
-    return render_template("admin_shows.html")
+    
+    return render_template("admin_shows.html",)
 
 @app.route("/admin_venues")
 def admin_venues():

@@ -1,94 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "layout.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+{% block body %}
 
-</head>
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+    <a class="navbar-brand mx-3" href="#">{{ username }} 's dashboard</a>
+    <div>
+        <a class="navbar-brand " href="#">Profile</a>
+        <a class="navbar-brand" href="user_bookings">Bookings</a>
+        <a class="navbar-brand" href="user_login">Logout</a>
+    </div>
 
-<body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-        <a class="navbar-brand mx-3" href="#">user-1's dashboard</a>
-        <div>
-            <a class="navbar-brand " href="#">Profile</a>
-            <a class="navbar-brand" href="#">Bookings</a>
-            <a class="navbar-brand" href="#">Logout</a>
+</nav>
+
+
+<!-- card-1 -->
+<div class="card m-5">
+    <h1 class="px-5 pt-3">Cinemax</h1>
+    <div class="row m-4">
+        <!-- show-1 -->
+        <div class="col-sm-4 p-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Show-1</h5>
+                    <p class="card-text">Time: 10am</p>
+                    <a href="#" class="btn btn-primary">Book now</a>
+                </div>
+            </div>
         </div>
-
-    </nav>
-
-
-    <!-- card-1 -->
-    <div class="card m-5">
-        <h1 class="px-5 pt-3">Cinemax</h1>
-        <div class="row m-4">
-            <!-- show-1 -->
-            <div class="col-sm-4 p-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Show-1</h5>
-                        <p class="card-text">Time: 10am</p>
-                        <a href="#" class="btn btn-primary">Book now</a>
-                    </div>
+        <!-- show-2 -->
+        <div class="col-sm-4 p-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Show-2</h5>
+                    <p class="card-text">Time: 1pm</p>
+                    <a href="#" class="btn btn-primary">Book now</a>
                 </div>
             </div>
-            <!-- show-2 -->
-            <div class="col-sm-4 p-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Show-2</h5>
-                        <p class="card-text">Time: 1pm</p>
-                        <a href="#" class="btn btn-primary">Book now</a>
-                    </div>
-                </div>
-            </div>
-            <!-- show-3 -->
-            <div class="col-sm-4 p-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Show-3</h5>
-                        <p class="card-text">Time: 5pm</p>
-                        <a href="#" class="btn btn-primary">Book now</a>
-                    </div>
+        </div>
+        <!-- show-3 -->
+        <div class="col-sm-4 p-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Show-3</h5>
+                    <p class="card-text">Time: 5pm</p>
+                    <a href="#" class="btn btn-primary">Book now</a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- card-2 -->
-    <div class="card m-5">
-        <h1 class="px-5 pt-3">PVR</h1>
-        <div class="row m-4">
-            <!-- show-1 -->
-            <div class="col-sm-4 p-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Show-1</h5>
-                        <p class="card-text">Time: 10am</p>
-                        <a href="#" class="btn btn-primary">Book now</a>
-                    </div>
+<!-- card-2 -->
+<div class="card m-5">
+    <h1 class="px-5 pt-3">PVR</h1>
+    <div class="row m-4">
+        <!-- show-1 -->
+        <div class="col-sm-4 p-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Show-1</h5>
+                    <p class="card-text">Time: 10am</p>
+                    <a href="#" class="btn btn-primary">Book now</a>
                 </div>
             </div>
-            <!-- show-2 -->
-            <div class="col-sm-4 p-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Show-2</h5>
-                        <p class="card-text">Time: 1pm</p>
-                        <a href="#" class="btn btn-primary">Book now</a>
-                    </div>
-                </div>
-            </div>
-
         </div>
+        <!-- show-2 -->
+        <div class="col-sm-4 p-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Show-2</h5>
+                    <p class="card-text">Time: 1pm</p>
+                    <a href="#" class="btn btn-primary">Book now</a>
+                </div>
+            </div>
+        </div>
+
     </div>
+</div>
 
-</body>
-
-</html>
+{% endblock %}

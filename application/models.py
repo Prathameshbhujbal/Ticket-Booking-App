@@ -3,10 +3,12 @@ from .database import db
 class Admins(db.Model):
     __tablename__ = "admins"
     user_name = db.Column(db.String, primary_key = True, unique = True)
+    password = db.Column(db.String)
 
 class Users(db.Model):
     __tablename__ = "users"
     username = db.Column(db.String, primary_key = True, unique = True)
+    password = db.Column(db.String)
 
 class Location(db.Model):
     __tablename__ = "location"
@@ -14,7 +16,7 @@ class Location(db.Model):
     show_name = db.Column(db.String, db.ForeignKey("shows.show_name"), primary_key = True, nullable = False)
     time = db.Column(db.String)
     capacity = db.Column(db.Integer)
-    place = db.Column(db.String)
+    Theatre = db.Column(db.String)
     city = db.Column(db.String)
 
 class Seats(db.Model):
